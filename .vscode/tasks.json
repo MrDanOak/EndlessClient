@@ -2,6 +2,16 @@
     "version": "2.0.0",
     "tasks": [
         {
+            "label": "format",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "format",
+                "${workspaceFolder}/EndlessClient/EndlessClient.csproj"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+        {
             "label": "build-client-linux",
             "command": "dotnet",
             "type": "process",
@@ -47,7 +57,10 @@
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
-            "problemMatcher": "$msCompile"
+            "problemMatcher": "$msCompile",
+            "dependsOn": [
+                "format"
+            ]
         },
     ]
 }

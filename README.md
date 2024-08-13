@@ -59,7 +59,7 @@ After installing, clone (or fork+clone) this repository locally and open the sol
 3. Install XCode from the [AppStore](https://apps.apple.com/us/app/xcode/id497799835?ls=1&mt=12)
 4. Run `dotnet build /p:PublishReadyToRun=false /p:TieredCompilation=false --self-contained EndlessClient`
 5. The build will fail due to a using alias already being declared
-6. Run `echo '' > EndlessClient/obj/Debug/net6.0-macos/osx-x64/EndlessClient.GlobalUsings.g.*.generated.cs`
+6. Run `echo '' > EndlessClient/obj/Debug/net8.0-macos/osx-x64/EndlessClient.GlobalUsings.g.*.generated.cs`
 7. Run the build again `dotnet build /p:PublishReadyToRun=false /p:TieredCompilation=false --self-contained EndlessClient`
 
 #### Mac errors
